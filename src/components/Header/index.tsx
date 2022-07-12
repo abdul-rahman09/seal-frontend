@@ -1,10 +1,10 @@
 import React from 'react';
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { APP_NAME } from 'config';
-import { AppRoutes, DashboardRoutes } from 'routes';
+import { AppRoutes } from 'routes';
 import {
   UserDropDown,
   NavDropDownLink,
@@ -31,14 +31,6 @@ const Header = () => {
             className='dropdown-menu-right'
             title={<FontAwesomeIcon icon={faPropIcon} title='' />}
           >
-            <NavDropDownLink to={DashboardRoutes.PROFILE.path}>
-              Profile
-            </NavDropDownLink>
-            <NavDropdown.Divider />
-            <NavDropDownLink to={DashboardRoutes.CHANGE_PASSWORD.path}>
-              Change Password
-            </NavDropDownLink>
-            <NavDropdown.Divider />
             <NavDropDownLink to={AppRoutes.LOGOUT.path}>Logout</NavDropDownLink>
           </UserDropDown>
         </Nav>

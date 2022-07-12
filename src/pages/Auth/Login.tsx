@@ -89,11 +89,6 @@ const Login: FunctionComponent<ILogin> = ({ authenticateUser, history }) => {
             </BorderedButton>
           </Form>
         </Formik>
-        {/* <div className='text-center pt-4'>
-          <Link to={AppRoutes.SIGNUP.path}>
-            Signup if you don't have an account yet
-          </Link>
-        </div> */}
       </Card.Body>
     </Card>
   );

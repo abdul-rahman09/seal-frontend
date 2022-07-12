@@ -11,7 +11,7 @@ import {
   fetchAllFiles,
   getShareableLink,
   uploadFile,
-} from 'pages/Auth/ducks/actions';
+} from 'pages/Dashboard/ducks/actions';
 import { DateWrapper, IconWrapper, FileWrapper } from 'pages/Dashboard/style';
 import 'react-datepicker/dist/react-datepicker.css';
 
@@ -83,9 +83,18 @@ const Example: React.FC<any> = ({ shared, onHide, shareLink }) => {
 
         {link && (
           <form>
-            <input readOnly ref={textAreaRef} value={link} />
+            <input
+              className='ml-2 w-75'
+              readOnly
+              ref={textAreaRef}
+              value={link}
+            />
             <span>
-              <Button variant='primary' onClick={copyToClipboard}>
+              <Button
+                className='ml-3'
+                variant='primary'
+                onClick={copyToClipboard}
+              >
                 Copy
               </Button>
               {copySuccess}

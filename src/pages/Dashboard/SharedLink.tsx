@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { get } from 'lodash';
-import { downloadFile, fetchDetails } from 'pages/Auth/ducks/actions';
+import { downloadFile, fetchDetails } from 'pages/Dashboard/ducks/actions';
 import { Card } from 'react-bootstrap';
 import { APP_NAME } from 'config';
 import 'react-datepicker/dist/react-datepicker.css';

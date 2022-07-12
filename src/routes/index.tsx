@@ -7,10 +7,7 @@ import Login from 'pages/Auth/Login';
 import Logout from 'pages/Auth/Logout';
 import PrivateRoute from 'components/PrivateRoute';
 import SharedLink from 'pages/Dashboard/SharedLink';
-const Signup = lazy(() => import('pages/Auth/Signup'));
-const ChangePassword = lazy(() => import('pages/Auth/ChangePassword'));
 const Dashboard = lazy(() => import('pages/Dashboard'));
-const Profile = lazy(() => import('pages/Profile'));
 
 export const RoutesHOC = (routes: any, defaultPath: any) => {
   const Routes: FunctionComponent<any> = (props: any) => (
@@ -46,17 +43,6 @@ export const RoutesHOC = (routes: any, defaultPath: any) => {
 };
 
 export const DashboardRoutes = {
-  PROFILE: {
-    path: '/profile',
-    name: 'Profile',
-    component: Profile,
-  },
-
-  CHANGE_PASSWORD: {
-    path: '/change-password',
-    name: 'Change Password',
-    component: ChangePassword,
-  },
   MAIN: {
     isPrivate: true,
     path: '/',
@@ -71,11 +57,6 @@ export const AppRoutes = {
     name: 'Shared Link',
     path: '/shared/:id',
     isPrivate: false,
-  },
-  SIGNUP: {
-    path: '/signup',
-    name: 'Signup',
-    component: siteLayout(Signup),
   },
   LOGIN: {
     path: '/login',

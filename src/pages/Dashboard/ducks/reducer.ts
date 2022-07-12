@@ -1,4 +1,4 @@
-import { ALL_FILES } from 'pages/Auth/ducks/action-types';
+import { ALL_FILES } from 'pages/Dashboard/ducks/action-types';
 import { LOADING } from 'pages/Dashboard/ducks/action-types';
 
 const initialState = {
